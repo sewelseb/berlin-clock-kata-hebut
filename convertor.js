@@ -1,11 +1,7 @@
 module.exports = {
     getSingleMinuteRow(time) {
         const minutes = this.getMinutes(time);
-        if(minutes === 1) return this.getYellowLampsForMinutes(minutes) + this.getTurnedOffLights(minutes);
-        if(minutes === 2) return this.getYellowLampsForMinutes(minutes) + this.getTurnedOffLights(minutes);
-        if(minutes === 3) return this.getYellowLampsForMinutes(minutes) + this.getTurnedOffLights(minutes);
-
-        return "0000";
+        return this.getYellowLampsForMinutes(minutes) + this.getTurnedOffLights(minutes);
     },
     getMinutes(time) {
         return parseInt(time.split(':')[1]);
