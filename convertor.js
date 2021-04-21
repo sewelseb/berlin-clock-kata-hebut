@@ -1,9 +1,9 @@
 module.exports = {
     getSingleMinuteRow(time) {
         const minutes = this.getMinutes(time);
-        if(minutes === 1) return this.getYellowLampsForMinutes(minutes) + "000";
-        if(minutes === 2) return this.getYellowLampsForMinutes(minutes) + "00";
-        if(minutes === 3) return this.getYellowLampsForMinutes(minutes) + "0";
+        if(minutes === 1) return this.getYellowLampsForMinutes(minutes) + this.getTurnedOffLights(minutes);
+        if(minutes === 2) return this.getYellowLampsForMinutes(minutes) + this.getTurnedOffLights(minutes);
+        if(minutes === 3) return this.getYellowLampsForMinutes(minutes) + this.getTurnedOffLights(minutes);
 
         return "0000";
     },
@@ -21,7 +21,7 @@ module.exports = {
     getTurnedOffLights(minutes) {
         var turnedOffLights = "";
         for (let i = 0; i < 4-minutes; i++) {
-            turnedOffLights += "Y";          
+            turnedOffLights += "0";          
         }
 
         return turnedOffLights;
