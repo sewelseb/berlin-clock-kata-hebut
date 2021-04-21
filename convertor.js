@@ -17,5 +17,13 @@ module.exports = {
         }
 
         return yellowLamps;
+    },
+    getTurnedOffLights(minutes) {
+        var turnedOffLights = "";
+        for (let i = 0; i < 4-minutes; i++) {
+            turnedOffLights += "Y";          
+        }
+
+        return turnedOffLights;
     }
 }
