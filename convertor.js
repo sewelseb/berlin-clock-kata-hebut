@@ -1,9 +1,12 @@
 module.exports = {
     getSingleMinuteRow(time) {
-        if(time === "00:01:00") return "Y000";
-        if(time === "00:02:00") return "YY00";
-        if(time === "00:03:00") return "YYY0";
+        if(this.getMinutes(time) === 1) return "Y000";
+        if(this.getMinutes(time) === 2) return "YY00";
+        if(this.getMinutes(time) === 3) return "YYY0";
 
         return "0000";
+    },
+    getMinutes(time) {
+        return parseInt(time.split(':')[1]);
     }
 }
