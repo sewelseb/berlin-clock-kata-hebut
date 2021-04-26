@@ -3,6 +3,9 @@ module.exports = {
         const minutes = this.getMinutes(time);
         return this.getYellowLampsForMinutes(minutes) + this.getTurnedOffLights(minutes);
     },
+    getFiveMinuteRow(time) {
+        return "00000000000";
+    },
     getMinutes(time) {
         return parseInt(time.split(':')[1]);
     },
