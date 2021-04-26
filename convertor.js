@@ -5,6 +5,7 @@ module.exports = {
     },
     getFiveMinuteRow(time) {
         if (time === "00:05:00") return "Y0000000000";
+        if (time === "00:10:00") return "YY000000000";
 
         return "00000000000";
     },
