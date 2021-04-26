@@ -4,8 +4,8 @@ module.exports = {
         return this.getYellowLampsForMinutes(minutes) + this.getTurnedOffLights(minutes);
     },
     getFiveMinuteRow(time) {
-        if (time === "00:01:00") return "Y0000000000";
-        
+        if (time === "00:01:00") return "00000000000";
+
         return "00000000000";
     },
     getMinutes(time) {
