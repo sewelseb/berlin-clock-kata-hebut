@@ -8,7 +8,7 @@ module.exports = {
     },
     getYellowLampsForMinutes(minutes) {
         var yellowLamps = "";
-        for (let i = 0; i < minutes%5; i++) {
+        for (let i = 0; i < this.getNumberOfYellowMinutesLights(minutes); i++) {
             yellowLamps += "Y";          
         }
 
@@ -16,10 +16,13 @@ module.exports = {
     },
     getTurnedOffLights(minutes) {
         var turnedOffLights = "";
-        for (let i = 0; i < 4-(minutes%5); i++) {
+        for (let i = 0; i < 4-this.getNumberOfYellowMinutesLights(minutes); i++) {
             turnedOffLights += "0";          
         }
 
         return turnedOffLights;
+    },
+    getNumberOfYellowMinutesLights(minutes) {
+        return minutes%5;
     }
 }
