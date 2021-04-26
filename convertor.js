@@ -7,6 +7,8 @@ module.exports = {
         const minutes = this.getMinutes(time); 
         if (minutes === 5) return "Y0000000000";
         if (minutes === 10) return "YY000000000";
+        if (minutes === 15) return "YYR00000000";
+
 
         return "00000000000";
     },
