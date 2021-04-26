@@ -9,7 +9,6 @@ module.exports = {
         if (minutes === 10) return "YY000000000";
         if (minutes === 15) return "YYR00000000";
 
-
         return "00000000000";
     },
     getMinutes(time) {
