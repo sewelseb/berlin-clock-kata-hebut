@@ -34,5 +34,10 @@ describe("Berlin clock kata project", function () {
 
             actual.should.equal("YYYY");
         });
+        it("given 00:05:00 should return 0000", function() {
+            actual = Convertor.getSingleMinuteRow("00:05:00");
+
+            actual.should.equal("0000");
+        });
     });
 });

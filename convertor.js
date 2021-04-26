@@ -8,7 +8,7 @@ module.exports = {
     },
     getYellowLampsForMinutes(minutes) {
         var yellowLamps = "";
-        for (let i = 0; i < minutes; i++) {
+        for (let i = 0; i < minutes%5; i++) {
             yellowLamps += "Y";          
         }
 
@@ -16,7 +16,7 @@ module.exports = {
     },
     getTurnedOffLights(minutes) {
         var turnedOffLights = "";
-        for (let i = 0; i < 4-minutes; i++) {
+        for (let i = 0; i < 4-(minutes%5); i++) {
             turnedOffLights += "0";          
         }
 
